@@ -1,0 +1,23 @@
+{
+  "name": "first-electron-app",
+  "version": "1.0.0",
+  "description": "first",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Small-Projects"
+  },
+  "keywords": [
+    "first",
+    "project"
+  ],
+  "author": "Lucas",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^37.2.6"
+  }
+}
