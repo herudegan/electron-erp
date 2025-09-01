@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>Clientes</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="clientes.css" />
+  </head>
+  <body>
+    
+    <main class="content">
+      <div class="clientes-header">
+        <h1>Clientes</h1>
+        <button id="btn-cadastrar" class="btn primary">Cadastrar</button>
+      </div>
+
+      <div class="table-wrap">
+        <table class="table clientes-table" aria-label="Lista de clientes">
+          <thead>
+            <tr>
+              <th>Razão Social</th>
+              <th>Cnpj</th>
+              <th>Email</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="clientes-tbody">
+            <!-- rows populated by clientes.js -->
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <!-- Modal: Cadastro de Clientes (embedded) -->
+    <div id="modal-overlay" class="modal-overlay" hidden>
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-header">
+          <h2 id="modal-title">Cadastrar Cliente</h2>
+          <button id="modal-close" class="btn ghost small" aria-label="Fechar">✕</button>
+        </div>
+        <div class="modal-body">
+          <form id="cadastro-form" class="client-form">
+            <div class="form-group">
+              <label for="name">Razão Social:</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="cnpj">CNPJ:</label>
+              <input type="text" id="cnpj" name="cnpj" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email (Opcional):</label>
+              <input type="email" id="email" name="email">
+            </div>
+            
+            <div class="form-actions">
+              <button type="submit" class="btn primary">Salvar</button>
+              <button type="reset" class="btn ghost">Limpar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <script src="../components/header/header.js"></script>
+    <script src="clientes.js"></script>
+  </body>
+</html>
